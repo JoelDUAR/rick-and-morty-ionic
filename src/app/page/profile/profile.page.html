@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="users"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <ion-grid>
+  <ion-row>
+    <ion-col sizeMd="4" offsetMd="4">
+      <div *ngIf="user">
+        <ion-card>
+          <ion-card-content class="ion-text-center">
+            <img src="{{user.image}}" alt="{{user.name}}">
+            <ion-card-title>
+              {{user.name}}
+            </ion-card-title>
+            <p>{{user.status}}</p>
+          </ion-card-content>
+        </ion-card>
+       </div>
+    </ion-col>
+  </ion-row>
+ </ion-grid>
+</ion-content>
